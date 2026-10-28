@@ -5,6 +5,7 @@ public class SiakadFor10 {
         Scanner sc = new Scanner(System.in);
 
         double grade, highest = 0, lowest = 100;
+        double pass = 0, fail = 0;
 
         for (int i = 1; i <= 10; i++) {
             System.out.print("Enter the grade of the " + i + " student: ");
@@ -15,9 +16,16 @@ public class SiakadFor10 {
             if (grade < lowest) {
                 lowest = grade;
             }
+            if (grade >= 60) {
+                pass++;
+            } else {
+                fail++;
+            }
         }
         System.out.println("Highest grade: " + highest);
         System.out.println("Lowest grade: " + lowest);
+        System.out.println("Passed: " + pass);
+        System.out.println("Failed: " + fail);
         sc.close();
     }
 }
